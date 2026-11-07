@@ -62,6 +62,14 @@ porta 5500).
 - **Nota:** o `robots.txt`/`sitemap.xml` apontam para `balmoralimperium.com` (sem
   "s"), diferente do domínio real `balmoralsimperium.com` — rever quando houver tempo.
 
+## Backup no GitHub (controlo de versões online)
+
+- Repositório: **bernardovsa-hub/Balmorals-Imperium** (branch `main`), ligado como
+  `origin`. É só backup/histórico — **não** publica o site (ver secção de publicar).
+- Conta GitHub para o push: **bernardovsa-hub** (não confundir com a BleckAviation,
+  que também está autenticada no `gh` deste PC).
+- Enviar alterações: `git push` (o upstream já está configurado).
+
 ## Notas de trabalho
 
 - A pasta está dentro do OneDrive, por isso o OneDrive sincroniza as alterações.
