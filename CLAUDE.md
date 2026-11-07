@@ -42,6 +42,26 @@ Não precisa de servidor — basta abrir o `index.html`. Para pré-visualizar co
 servidor local usa-se a configuração em `.claude/launch.json` (serve a pasta na
 porta 5500).
 
+## Como publicar (pôr ao vivo)
+
+- **Domínio ao vivo:** https://balmoralsimperium.com (atenção: é com **"s"** —
+  balmoral**s**imperium.com).
+- **Alojamento:** Netlify, site `creative-pothos-91597b`
+  (ID `95fe677d-6e5a-47db-9482-5f5fe1e793e1`, equipa "Balmoral's Imperium").
+  Publicação por **deploy manual** via Netlify CLI (não está ligado ao GitHub).
+- **Publicar:** correr o script, que monta uma pasta limpa (sem `venv`/backups) e
+  faz o deploy de produção:
+
+  ```powershell
+  powershell -File deploy.ps1 "mensagem do deploy"
+  ```
+
+  Requer o Netlify CLI (`npm i -g netlify-cli`) e estar autenticado
+  (`netlify login`, conta bernardovsa@gmail.com). O Node.js está instalado em
+  `C:\Program Files\nodejs`.
+- **Nota:** o `robots.txt`/`sitemap.xml` apontam para `balmoralimperium.com` (sem
+  "s"), diferente do domínio real `balmoralsimperium.com` — rever quando houver tempo.
+
 ## Notas de trabalho
 
 - A pasta está dentro do OneDrive, por isso o OneDrive sincroniza as alterações.
