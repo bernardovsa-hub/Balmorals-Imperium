@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://www.balmoralimperium.com/sitemap.xml

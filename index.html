@@ -1,0 +1,2575 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balmoral's Imperium | Criação de Cavalier King Charles Spaniel</title>
+        <meta name="description" content="Balmoral's Imperium - Criação responsável de Cavalier King Charles Spaniel em Portugal. Cães de excelência com pedigree, saúde testada e temperamento excecional.">
+    <meta name="keywords" content="Cavalier King Charles Spaniel, criação cães Portugal, Balmoral's Imperium, cachorros Cavalier, canil Portugal">
+    <meta name="author" content="Balmoral's Imperium">
+    <meta property="og:title" content="Balmoral's Imperium | Cavalier King Charles Spaniel">
+    <meta property="og:description" content="Criação responsável de Cavalier King Charles Spaniel em Portugal.">
+    <meta property="og:url" content="https://www.balmoralimperium.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c1810;
+            --secondary: #8b6914;
+            --accent: #d4af37;
+            --cream: #faf8f5;
+            --warm-white: #f5f0eb;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f4e5c2 50%, #d4af37 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--cream);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.5rem 5%;
+            box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-style: italic;
+        }
+
+        .logo i {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .language-selector {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .form-status {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: var(--primary);
+            min-height: 1.2rem;
+        }
+
+        .language-modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            padding: 1.5rem;
+        }
+
+        .language-modal.open {
+            display: flex;
+        }
+
+        .language-modal-content {
+            width: min(520px, 100%);
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+        }
+
+        .language-modal-content h2 {
+            margin-bottom: 0.75rem;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .language-modal-content p {
+            margin-bottom: 1.75rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .language-modal-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .language-modal-list li {
+            border: 1px solid #ddd;
+            border-radius: 14px;
+            padding: 1rem 0.75rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: #faf8f5;
+        }
+
+        .language-modal-list li:hover,
+        .language-modal-list li:focus-visible {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            outline: none;
+        }
+
+        .language-modal-list li span {
+            font-size: 0.95rem;
+            color: var(--primary);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .language-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.8rem;
+            height: 2.8rem;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,0.15);
+            background: white;
+            cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .language-button:hover,
+        .language-dropdown li:hover {
+            transform: scale(1.05);
+            border-color: var(--accent);
+            background: rgba(255,255,255,0.95);
+        }
+
+        .language-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.8rem;
+            height: 2.8rem;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,0.15);
+            background: white;
+            cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .language-flag {
+            display: inline-block;
+            width: 1.5rem;
+            height: 1rem;
+            background-size: cover;
+            background-position: center;
+            border-radius: 0.2rem;
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            right: 0;
+            display: none;
+            flex-direction: column;
+            gap: 0.35rem;
+            padding: 0.5rem;
+            min-width: 10rem;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 0.75rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            z-index: 1100;
+        }
+
+        .language-dropdown.active {
+            display: flex;
+        }
+
+        .language-dropdown li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.55rem 0.75rem;
+            border-radius: 0.65rem;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .language-dropdown li.active {
+            background: rgba(212,175,55,0.12);
+        }
+
+        .language-dropdown li span {
+            display: block;
+        }
+
+        .language-dropdown li .sr-only,
+        .language-button .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .flag-pt {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 4'%3E%3Crect width='6' height='4' fill='%23ce1126'/%3E%3Crect width='2.44' height='4' fill='%23009329'/%3E%3C/svg%3E");
+        }
+
+        .flag-en {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3Crect width='60' height='30' fill='%23003f87'/%3E%3Cpath d='M0 0 L60 30 M60 0 L0 30' stroke='%23fff' stroke-width='8'/%3E%3Cpath d='M0 0 L60 30 M60 0 L0 30' stroke='%23cf142b' stroke-width='4'/%3E%3Crect x='25' width='10' height='30' fill='%23fff'/%3E%3Crect y='10' width='60' height='10' fill='%23fff'/%3E%3Crect x='27' width='6' height='30' fill='%23cf142b'/%3E%3Crect y='12' width='60' height='6' fill='%23cf142b'/%3E%3C/svg%3E");
+        }
+
+        .flag-es {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 4'%3E%3Crect width='6' height='4' fill='%23c60b1e'/%3E%3Crect y='1' width='6' height='2' fill='%23ffc400'/%3E%3C/svg%3E");
+        }
+
+        .flag-fr {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 4'%3E%3Crect width='2' height='4' fill='%2300539a'/%3E%3Crect x='2' width='2' height='4' fill='%23fff'/%3E%3Crect x='4' width='2' height='4' fill='%23ef4135'/%3E%3C/svg%3E");
+        }
+
+        .flag-zh {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 4'%3E%3Crect width='6' height='4' fill='%23de2910'/%3E%3Ccircle cx='1.1' cy='1' r='0.4' fill='%23ffde00'/%3E%3Cpath d='M1.06 0.6 l0.06 0.25 0.25 0.06 l-0.2 0.16 l0.06 0.25 l-0.2 -0.16 l-0.2 0.16 l0.06 -0.25 l-0.2 -0.16 l0.25 -0.06 z' fill='%23ffde00'/%3E%3C/svg%3E");
+        }
+
+        .flag-ja {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 4'%3E%3Crect width='6' height='4' fill='%23fff'/%3E%3Ccircle cx='3' cy='2' r='1.1' fill='%23bc002d'/%3E%3C/svg%3E");
+        }
+
+        .flag-ru {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 4'%3E%3Crect width='6' height='1.333' fill='%23fff'/%3E%3Crect y='1.333' width='6' height='1.333' fill='%230000b7'/%3E%3Crect y='2.666' width='6' height='1.334' fill='%23d52b1e'/%3E%3C/svg%3E");
+        }
+
+        .nav-instagram {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.7rem;
+            height: 2.7rem;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.12);
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .nav-instagram:hover {
+            transform: scale(1.05);
+            border-color: var(--accent);
+            background: rgba(255,255,255,0.96);
+            color: var(--secondary);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: #17222f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            padding: 0 5% 0 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4H4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.25;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1200px;
+            width: 100%;
+            padding: 2rem 0;
+        }
+
+        .hero-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: rgba(23, 34, 47, 0.55);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 30px;
+            padding: 2rem;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+            min-height: 420px;
+        }
+
+        .hero-logo img {
+            width: 100%;
+            max-width: 420px;
+            object-fit: contain;
+            mix-blend-mode: lighten;
+            opacity: 0.95;
+            transition: transform 0.4s ease;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 740px;
+            padding: 0 2rem 0 0;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+            text-align: left;
+        }
+
+        .hero-subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            font-weight: 300;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.05;
+            letter-spacing: 0.04em;
+            font-style: italic;
+            font-weight: 600;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.35);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold-gradient);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+            border-color: var(--accent);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+            margin-left: 1rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            color: white;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin: 1rem auto 0;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--warm-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            aspect-ratio: 1.25 / 1;
+            min-height: 420px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--accent);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(180px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .stat-item {
+            text-align: center;
+            width: 100%;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Dogs Section */
+        .dogs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .dog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .dog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .dog-card-image {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .dog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .dog-card:hover .dog-card-image img {
+            transform: scale(1.1);
+        }
+
+        .dog-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--gold-gradient);
+            color: var(--primary);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .dog-card-content {
+            padding: 1.5rem 2rem 2rem;
+        }
+
+        .dog-card-content h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .dog-card-content .dog-breed {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .dog-card-content p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .dog-traits {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .trait {
+            background: var(--warm-white);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            border: 1px solid #e0d5c8;
+        }
+
+        /* Philosophy Section */
+        .philosophy {
+            background: var(--primary);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .philosophy::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url("imagens/gabriela-charlie-sammy.jpeg") center/cover;
+            opacity: 0.2;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .philosophy-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+
+        .philosophy-content p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            font-size: 1.05rem;
+        }
+
+        .philosophy-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .philosophy-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .philosophy-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background: var(--cream);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(44, 24, 16, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.65rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item {
+            cursor: pointer;
+        }
+
+        .image-modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 2000;
+            padding: 1.5rem;
+        }
+
+        .image-modal.open {
+            display: flex;
+        }
+
+        .image-modal img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            object-fit: contain;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            width: 2.8rem;
+            height: 2.8rem;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .modal-close:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-overlay i {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .gallery-caption span {
+            display: block;
+            color: white;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .gallery-caption small {
+            display: block;
+            color: #f1e6d4;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--warm-white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-item i {
+            width: 50px;
+            height: 50px;
+            background: var(--gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .contact-item div h4 {
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-item div p {
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0d5c8;
+            border-radius: 10px;
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            background: var(--cream);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            background: var(--gold-gradient);
+            color: var(--primary);
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Instagram Section */
+        .instagram {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 4rem 5%;
+        }
+
+        .instagram h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .instagram p {
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .instagram-handle {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .instagram-handle:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(220, 39, 67, 0.4);
+        }
+
+        .instagram-handle i {
+            font-size: 1.5rem;
+        }
+
+        .partner-highlight {
+            background: #fff8ef;
+            color: #1a0f0a;
+            padding: 2rem 5%;
+            text-align: center;
+        }
+
+        .partner-highlight .partner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .partner-highlight .partner-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1 1 320px;
+            min-width: 280px;
+            color: inherit;
+        }
+
+        .partner-highlight .partner-link {
+            text-decoration: none;
+        }
+
+        .partner-highlight .partner-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .partner-highlight img {
+            max-width: 120px;
+            width: 100%;
+            border-radius: 1rem;
+            object-fit: contain;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .partner-highlight h3 {
+            font-size: 2rem;
+            margin: 0;
+            color: var(--accent);
+        }
+
+        .partner-highlight p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 620px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a0f0a;
+            color: white;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .footer-social a {
+            width: 45px;
+            height: 45px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-logo {
+                min-height: auto;
+                padding: 1.5rem;
+            }
+
+            .hero-logo img {
+                max-width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid,
+            .philosophy-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .philosophy::before {
+                width: 100%;
+                opacity: 0.1;
+            }
+
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 4rem 5%;
+            }
+
+            .language-selector {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                border: none;
+                border-radius: 0;
+                background: transparent;
+                box-shadow: none;
+            }
+
+            .language-button {
+                width: 2.7rem;
+                height: 2.7rem;
+            }
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(250, 248, 245, 0.98);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .mobile-nav a:hover {
+            color: var(--accent);
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#inicio" class="logo">
+            <i class="fas fa-crown"></i>
+            Balmoral's Imperium
+        </a>
+        <ul class="nav-links">
+            <li><a href="#inicio" data-translate="nav_home">Início</a></li>
+            <li><a href="#sobre" data-translate="nav_about">Sobre Nós</a></li>
+            <li><a href="#caes" data-translate="nav_dogs">Os Nossos Cães</a></li>
+            <li><a href="#filosofia" data-translate="nav_philosophy">Filosofia</a></li>
+            <li><a href="#galeria" data-translate="nav_gallery">Galeria</a></li>
+            <li><a href="#contacto" data-translate="nav_contact">Contacto</a></li>
+        </ul>
+        <div class="language-selector">
+            <button id="languageButton" class="language-button" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Selecionar idioma">
+                <span class="language-flag flag-pt"></span>
+                <span class="sr-only">Selecionar idioma</span>
+            </button>
+            <ul class="language-dropdown" id="languageDropdown" role="listbox" aria-labelledby="languageButton">
+                <li role="option" data-lang="pt" class="active" title="Português">
+                    <span class="language-flag flag-pt"></span>
+                    <span class="sr-only">Português</span>
+                </li>
+                <li role="option" data-lang="en" title="English">
+                    <span class="language-flag flag-en"></span>
+                    <span class="sr-only">English</span>
+                </li>
+                <li role="option" data-lang="es" title="Español">
+                    <span class="language-flag flag-es"></span>
+                    <span class="sr-only">Español</span>
+                </li>
+                <li role="option" data-lang="fr" title="Français">
+                    <span class="language-flag flag-fr"></span>
+                    <span class="sr-only">Français</span>
+                </li>
+                <li role="option" data-lang="zh" title="中文">
+                    <span class="language-flag flag-zh"></span>
+                    <span class="sr-only">中文</span>
+                </li>
+                <li role="option" data-lang="ja" title="日本語">
+                    <span class="language-flag flag-ja"></span>
+                    <span class="sr-only">日本語</span>
+                </li>
+                <li role="option" data-lang="ru" title="Русский">
+                    <span class="language-flag flag-ru"></span>
+                    <span class="sr-only">Русский</span>
+                </li>
+            </ul>
+        </div>
+        <a href="https://instagram.com/balmorals_imperium" target="_blank" class="nav-instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <div class="mobile-menu" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="language-modal" id="languageModal" aria-hidden="true">
+        <div class="language-modal-content" role="dialog" aria-modal="true" aria-labelledby="languageModalTitle">
+            <h2 id="languageModalTitle">Escolha o seu idioma</h2>
+            <p>Selecione o idioma preferido para navegar no site. Esta escolha será guardada para a sua próxima visita.</p>
+            <ul class="language-modal-list">
+                <li role="button" tabindex="0" data-lang="pt">
+                    <span class="language-flag flag-pt"></span>
+                    <span>Português</span>
+                </li>
+                <li role="button" tabindex="0" data-lang="en">
+                    <span class="language-flag flag-en"></span>
+                    <span>English</span>
+                </li>
+                <li role="button" tabindex="0" data-lang="es">
+                    <span class="language-flag flag-es"></span>
+                    <span>Español</span>
+                </li>
+                <li role="button" tabindex="0" data-lang="fr">
+                    <span class="language-flag flag-fr"></span>
+                    <span>Français</span>
+                </li>
+                <li role="button" tabindex="0" data-lang="zh">
+                    <span class="language-flag flag-zh"></span>
+                    <span>中文</span>
+                </li>
+                <li role="button" tabindex="0" data-lang="ja">
+                    <span class="language-flag flag-ja"></span>
+                    <span>日本語</span>
+                </li>
+                <li role="button" tabindex="0" data-lang="ru">
+                    <span class="language-flag flag-ru"></span>
+                    <span>Русский</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="close-menu" onclick="toggleMenu()">
+            <i class="fas fa-times"></i>
+        </div>
+        <a href="#inicio" onclick="toggleMenu()" data-translate="nav_home">Início</a>
+        <a href="#sobre" onclick="toggleMenu()" data-translate="nav_about">Sobre Nós</a>
+        <a href="#caes" onclick="toggleMenu()" data-translate="nav_dogs">Os Nossos Cães</a>
+        <a href="#filosofia" onclick="toggleMenu()" data-translate="nav_philosophy">Filosofia</a>
+        <a href="#galeria" onclick="toggleMenu()" data-translate="nav_gallery">Galeria</a>
+        <a href="#contacto" onclick="toggleMenu()" data-translate="nav_contact">Contacto</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-inner">
+            <div class="hero-logo">
+                <img src="imagens/logobalmoralsimperium.png" alt="Balmoral's Imperium logo">
+            </div>
+            <div class="hero-content">
+                <p class="hero-subtitle" data-translate="hero_subtitle">Criação Responsável</p>
+                <h1>Balmoral's Imperium</h1>
+                <p data-translate="hero_description">Excelência e dedicação na criação de Cavalier King Charles Spaniel. Cada cão é uma obra de amor, saúde e temperamento excecional.</p>
+                <div class="hero-buttons">
+                    <a href="#caes" class="btn-primary" data-translate="hero_cta_dogs">Conheça os nossos cães</a>
+                    <a href="#contacto" class="btn-secondary" data-translate="hero_cta_contact">Contactar-nos</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <div class="section-header fade-in">
+            <h2 data-translate="about_title">Sobre Nós</h2>
+            <p data-translate="about_tagline">Uma história de paixão, dedicação e respeito pela raça Cavalier King Charles Spaniel</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-image fade-in">
+                <img src="imagens/charlotte.jpeg" alt="Charlotte Cavalier King Charles Spaniel">
+            </div>
+            <div class="about-content fade-in">
+                <h3 data-translate="about_heading">Tradição e Excelência</h3>
+                <p data-translate="about_p1">A Balmoral's Imperium nasceu do amor incondicional pela raça Cavalier King Charles Spaniel. O nosso nome evoca a grandiosidade e a tradição britânica, valores que imprimimos em cada criação.</p>
+                <p data-translate="about_p2">Selecionamos meticulosamente cada reprodutor, privilegiando a saúde, o temperamento amoroso e as características morfológicas da raça. Todos os nossos cães são submetidos a rigorosos testes degenerativos e genéticos.</p>
+                <p data-translate="about_p3">Acreditamos que cada cachorro deve ser um companheiro leal, saudável e com um temperamento excecional — qualidades que tornam o Cavalier uma das raças mais adoradas do mundo.</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label" data-translate="about_stat1">Testes de Saúde</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label" data-translate="about_stat2">Dedicação</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label" data-translate="about_stat3">Resultados Infinitos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dogs Section -->
+    <section id="caes">
+        <div class="section-header fade-in">
+            <h2 data-translate="dogs_title">Os Nossos Cães</h2>
+            <p data-translate="dogs_description">Conhece os nossos exemplares de excelência, seleccionados com rigor e criados com amor</p>
+        </div>
+        <div class="dogs-grid">
+            <div class="dog-card fade-in">
+                <div class="dog-card-image">
+                    <img src="imagens/charlotte2.jpeg" alt="Charlotte Cavalier King Charles Spaniel">
+                </div>
+                <div class="dog-card-content">
+                    <span class="dog-breed">BREATH JLW24 CW23 NW25 JALW26 JCH(PT) CH(PT) GrCH(PT)</span>
+                    <h3>Valéria de Terras Lusitanas</h3>
+                    <div class="dog-traits">
+                        <span class="trait">HEART/DOPPLER: CLEAR</span>
+                        <span class="trait">EYES: CLEAR</span>
+                        <span class="trait">PATTELA LUX: 0/0</span>
+                        <span class="trait">DNA: CLEAR</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dog-card fade-in">
+                <div class="dog-card-image">
+                    <img src="imagens/charlie4.jpeg" alt="Cavalier King Charles Spaniel">
+                </div>
+                <div class="dog-card-content">
+                    <span class="dog-breed">PALW25 JCW25 JALW25 JLW26 JCH(PT IBER)</span>
+                    <h3>Prince Charles The Royalty of Balmoral's Imperium</h3>
+                    <div class="dog-traits">
+                        <span class="trait">HEART/DOPPLER: CLEAR</span>
+                        <span class="trait">EYES: CLEAR</span>
+                        <span class="trait">PATTELA LUX: 0/0</span>
+                        <span class="trait">DNA: CLEAR</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dog-card fade-in">
+                <div class="dog-card-image">
+                    <img src="imagens/gabriela.jpeg" alt="Candy Paradise Club">
+                </div>
+                <div class="dog-card-content">
+                    <span class="dog-breed">JCH(PT ES) CH(ES)</span>
+                    <h3>Candy Paradise Club</h3>
+                    <div class="dog-traits">
+                        <span class="trait">HEART/DOPPLER: CLEAR</span>
+                        <span class="trait">EYES: CLEAR</span>
+                        <span class="trait">PATTELA LUX: 0/0</span>
+                        <span class="trait">DNA: CLEAR</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dog-card fade-in">
+                <div class="dog-card-image">
+                    <img src="imagens/viktoria5.jpeg" alt="Cavalier King Charles Spaniel">
+                </div>
+                <div class="dog-card-content">
+                    <span class="dog-breed">balw24 bnw24 palw24 pcw24 <strong>JCH(PT)</strong></span>
+                    <h3>Russkiy Dhekpot Viktoriya II</h3>
+                    <div class="dog-traits">
+                        <span class="trait">HEART/DOPPLER: CLEAR</span>
+                        <span class="trait">EYES: CLEAR</span>
+                        <span class="trait">PATTELA LUX: 0/0</span>
+                        <span class="trait">DNA: CLEAR</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dog-card fade-in">
+                <div class="dog-card-image">
+                    <img src="imagens/stella4.jpeg" alt="Cavalier King Charles Spaniel">
+                </div>
+                <div class="dog-card-content">
+                    <span class="dog-breed">JALW24 JCW23 ALW23 <strong>JCH(PT)</strong></span>
+                    <h3>Russkiy Dzhekpot Doroti</h3>
+                    <div class="dog-traits">
+                        <span class="trait">HEART/DOPPLER: CLEAR</span>
+                        <span class="trait">EYES: CLEAR</span>
+                        <span class="trait">PATTELA LUX: 0/0</span>
+                        <span class="trait">DNA: CLEAR</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dog-card fade-in">
+                <div class="dog-card-image">
+                    <img src="imagens/sammy7.jpeg" alt="Cavalier King Charles Spaniel">
+                </div>
+                <div class="dog-card-content">
+                    <span class="dog-breed">PCW25 PALW25 JCH(PT ES)</span>
+                    <h3>Devoted to you Harmony of life</h3>
+                    <div class="dog-traits">
+                        <span class="trait">HEART/DOPPLER: CLEAR</span>
+                        <span class="trait">EYES: CLEAR</span>
+                        <span class="trait">PATTELA LUX: 0/0</span>
+                        <span class="trait">DNA: CLEAR</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dog-card fade-in">
+                <div class="dog-card-image">
+                    <img src="imagens/jasper2.jpeg" alt="Cavalier King Charles Spaniel">
+                </div>
+                <div class="dog-card-content">
+                    <span class="dog-breed">BLW26</span>
+                    <h3>Baccarat Harmony of Life</h3>
+                    <div class="dog-traits">
+                        <span class="trait">HEART/DOPPLER: CLEAR</span>
+                        <span class="trait">EYES: CLEAR</span>
+                        <span class="trait">PATTELA LUX: 0/0</span>
+                        <span class="trait">DNA: CLEAR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy" id="filosofia">
+        <div class="philosophy-grid">
+            <div class="philosophy-content fade-in">
+                <h2 data-translate="philosophy_title">A Nossa Filosofia</h2>
+                <p data-translate="philosophy_p1">Na Balmoral's Imperium, a criação vai muito além de produzir cachorros. Trata-se de preservar a essência da raça, garantindo que cada novo exemplar seja saudável, equilibrado e capaz de trazer alegria às famílias durante muitos anos.</p>
+                <p data-translate="philosophy_p2">Seguimos rigorosamente os protocolos de saúde recomendados pelas associações cinófilas internacionais, incluindo testes de MVD (Mitral Valve Disease), SM (Syringomyelia) e exames oftalmológicos.</p>
+                <ul class="philosophy-list">
+                    <li data-translate="philosophy_li1">Testes genéticos rigorosos em todos os reprodutores</li>
+                    <li data-translate="philosophy_li2">Acompanhamento veterinário contínuo</li>
+                    <li data-translate="philosophy_li3">Socialização precoce e estimulação sensorial</li>
+                    <li data-translate="philosophy_li4">Contrato de compra com garantia de saúde dos progenitores</li>
+                    <li data-translate="philosophy_li5">Aconselhamento pós-venda vitalício</li>
+                    <li data-translate="philosophy_li6">Compromisso com o bem-estar animal</li>
+                </ul>
+            </div>
+            <div></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="galeria">
+        <div class="section-header fade-in">
+            <h2 data-translate="gallery_title">Galeria</h2>
+            <p data-translate="gallery_text">Momentos especiais capturados na Balmoral's Imperium</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">
+                <img src="imagens/charlotte-e-charlie.jpeg" alt="Cavalier">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="imagens/charlotte-e-charlie2.jpeg" alt="Cavalier">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="imagens/gabriela.jpeg" alt="Cavalier">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="imagens/sammy2.jpeg" alt="Cavalier">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="imagens/viktoria-e-stella.jpeg" alt="Viktoria e Stella">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="imagens/jasper.jpeg" alt="Jasper">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="imagens/gabriela-charlie-sammy.jpeg" alt="Gabriela, Charlie e Sammy">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="imagens/charles.jpeg" alt="Charles">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="imagens/charlie.jpeg" alt="Charlie">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="imagens/charlie3.jpeg" alt="Charlie 3">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="imagens/gabriela2.jpeg" alt="Gabriela 2">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="imagens/pikachu.jpeg" alt="Pikachu">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="imagens/sammy3.jpeg" alt="Sammy 3">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="imagens/whatsapp-image-2026-06-28-at-18.07.29--10-.jpeg" alt="Cavalier">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="image-modal" id="imageModal" aria-hidden="true">
+        <button type="button" class="modal-close" id="modalClose" aria-label="Fechar imagem">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="modalImage" src="" alt="">
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="section-header fade-in">
+            <h2 data-translate="contact_title">Contacto</h2>
+            <p data-translate="contact_description">Entra em contacto connosco para mais informações sobre as nossas crias</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info fade-in">
+                <h3 data-translate="contact_talk">Fala Connosco</h3>
+                <p data-translate="contact_info_text">Estamos disponíveis para responder a todas as tuas questões sobre a raça, as nossas crias e o processo de reserva. Cada cachorro merece uma família perfeita.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-translate="contact_location">Localização</h4>
+                            <p>Lisboa, Portugal</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-translate="contact_email">Email</h4>
+                            <p>info@balmoralsimperium.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>+351 968 687 413</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <div>
+                            <h4 data-translate="contact_instagram">Instagram</h4>
+                            <p>@balmorals_imperium</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form fade-in">
+                <form id="contactForm" action="mailto:info@balmoralimperium.com" method="POST" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="nome" data-translate="form_name_label">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required data-translate-placeholder="form_name_placeholder" placeholder="O teu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-translate="form_email_label">Email</label>
+                        <input type="email" id="email" name="email" required data-translate-placeholder="form_email_placeholder" placeholder="O teu email">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone" data-translate="form_phone_label">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" data-translate-placeholder="form_phone_placeholder" placeholder="O teu contacto telefónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem" data-translate="form_message_label">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" required data-translate-placeholder="form_message_placeholder" placeholder="Conta-nos o que procuras..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" data-translate="form_submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="instagram">
+        <h2 data-translate="instagram_title">Segue-nos no Instagram</h2>
+        <p data-translate="instagram_text">Acompanha o dia a dia da Balmoral's Imperium e descobre as últimas novidades</p>
+        <a href="https://instagram.com/balmorals_imperium" target="_blank" class="instagram-handle">
+            <i class="fab fa-instagram"></i>
+            @balmorals_imperium
+        </a>
+    </section>
+
+    <!-- Partner Highlight -->
+    <section class="partner-highlight">
+        <div class="partner-content partner-grid">
+            <a href="https://petclinic.pt/" target="_blank" class="partner-card partner-link">
+                <img src="imagens/petclinic.jpg" alt="Petclinic Telheiras logo">
+                <div>
+                    <h3>Petclinic Telheiras</h3>
+                    <p data-translate="partner_petclinic_text">Clínica veterinária parceira da Balmoral's Imperium, com atendimento dedicado e cuidados especializados para os nossos cães.</p>
+                </div>
+            </a>
+            <a href="https://centroreproducaoanimal.pt/" target="_blank" class="partner-card partner-link">
+                <img src="imagens/cral.png" alt="CRA Centro de Reprodução Animal logo">
+                <div>
+                    <h3>CRA Centro de Reprodução Animal</h3>
+                    <p data-translate="partner_cral_text">Parceiro especializado em reprodução animal, garantindo suporte técnico e cuidado avançado para as nossas linhagens.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-crown"></i> Balmoral's Imperium
+            </div>
+            <p>Criação de Cavalier King Charles Spaniel</p>
+            
+            <div class="footer-links">
+                <a href="#inicio" data-translate="nav_home">Início</a>
+                <a href="#sobre" data-translate="nav_about">Sobre Nós</a>
+                <a href="#caes" data-translate="nav_dogs">Os Nossos Cães</a>
+                <a href="#filosofia" data-translate="nav_philosophy">Filosofia</a>
+                <a href="#galeria" data-translate="nav_gallery">Galeria</a>
+                <a href="#contacto" data-translate="nav_contact">Contacto</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://instagram.com/balmorals_imperium" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/alberto.arlistico/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="mailto:info@balmoralimperium.com"><i class="fas fa-envelope"></i></a>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-translate="footer_rights">Balmoral's Imperium. Todos os direitos reservados. | Criação responsável de Cavalier King Charles Spaniel</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        const translations = {
+            pt: {
+                language_label: 'Idioma',
+                nav_home: 'Início',
+                nav_about: 'Sobre Nós',
+                nav_dogs: 'Os Nossos Cães',
+                nav_philosophy: 'Filosofia',
+                nav_gallery: 'Galeria',
+                nav_contact: 'Contacto',
+                instagram_title: 'Segue-nos no Instagram',
+                instagram_text: 'Acompanha o dia a dia da Balmoral\'s Imperium e descobre as últimas novidades',
+                partner_petclinic_text: 'Clínica veterinária parceira da Balmoral\'s Imperium, com atendimento dedicado e cuidados especializados para os nossos cães.',
+                partner_cral_text: 'Parceiro especializado em reprodução animal, garantindo suporte técnico e cuidado avançado para as nossas linhagens.',
+                hero_subtitle: 'Criação Responsável',
+                hero_description: 'Excelência e dedicação na criação de Cavalier King Charles Spaniel. Cada cão é uma obra de amor, saúde e temperamento excecional.',
+                hero_cta_dogs: 'Conheça os nossos cães',
+                hero_cta_contact: 'Contactar-nos',
+                about_title: 'Sobre Nós',
+                about_tagline: 'Uma história de paixão, dedicação e respeito pela raça Cavalier King Charles Spaniel',
+                about_heading: 'Tradição e Excelência',
+                about_p1: 'A Balmoral\'s Imperium nasceu do amor incondicional pela raça Cavalier King Charles Spaniel. O nosso nome evoca a grandiosidade e a tradição britânica, valores que imprimimos em cada criação.',
+                about_p2: 'Selecionamos meticulosamente cada reprodutor, privilegiando a saúde, o temperamento amoroso e as características morfológicas da raça. Todos os nossos cães são submetidos a rigorosos testes degenerativos e genéticos.',
+                about_p3: 'Acreditamos que cada cachorro deve ser um companheiro leal, saudável e com um temperamento excecional — qualidades que tornam o Cavalier uma das raças mais adoradas do mundo.',
+                about_stat1: 'Testes de Saúde',
+                about_stat2: 'Dedicação',
+                about_stat3: 'Resultados Infinitos',
+                dogs_title: 'Os Nossos Cães',
+                dogs_description: 'Conhece os nossos exemplares de excelência, seleccionados com rigor e criados com amor',
+                dog1_desc: 'Fêmea Blenheim de porte elegante e temperamento sereno. Temperamento exemplar e presença marcante em exposições.',
+                dog2_desc: 'Macho Blenheim de porte elegante e temperamento sereno. Exemplar de alta linhagem com presença marcante em exposições e programas de reprodução.',
+                dog3_desc: 'Exemplar de alta linhagem e carácter excepcional, com aptidão para exposições e criação. Presença elegante e temperamento equilibrado em qualquer ambiente.',
+                dog4_desc: 'Fêmea Blenheim de porte elegante e temperamento sereno. Excelente mãe e presença cativante em exposições e lares.',
+                dog5_desc: 'Fêmea Ruby com excelente genética e caráter dócil. Preparada para safras com acompanhamento veterinário completo.',
+                dog6_desc: 'Exemplar Tricolour com excelente temperamento familiar. Ideal para lares que procuram um amigo leal e tranquilo.',
+                philosophy_title: 'A Nossa Filosofia',
+                philosophy_p1: 'Na Balmoral\'s Imperium, a criação vai muito além de produzir cachorros. Trata-se de preservar a essência da raça, garantindo que cada novo exemplar seja saudável, equilibrado e capaz de trazer alegria às famílias durante muitos anos.',
+                philosophy_p2: 'Seguimos rigorosamente os protocolos de saúde recomendados pelas associações cinófilas internacionais, incluindo testes de MVD (Mitral Valve Disease), SM (Syringomyelia) e exames oftalmológicos.',
+                philosophy_li1: 'Testes genéticos rigorosos em todos os reprodutores',
+                philosophy_li2: 'Acompanhamento veterinário contínuo',
+                philosophy_li3: 'Socialização precoce e estimulação sensorial',
+                philosophy_li4: 'Contrato de compra com garantia de saúde dos progenitores',
+                philosophy_li5: 'Aconselhamento pós-venda vitalício',
+                philosophy_li6: 'Compromisso com o bem-estar animal',
+                gallery_title: 'Galeria',
+                gallery_text: 'Momentos especiais capturados na Balmoral\'s Imperium',
+                gallery_group: 'Grupo',
+                contact_title: 'Contacto',
+                contact_description: 'Entra em contacto connosco para mais informações sobre as nossas crias',
+                contact_talk: 'Fala Connosco',
+                contact_info_text: 'Estamos disponíveis para responder a todas as tuas questões sobre a raça, as nossas crias e o processo de reserva. Cada cachorro merece uma família perfeita.',
+                contact_location: 'Localização',
+                contact_email: 'Email',
+                contact_instagram: 'Instagram',
+                form_name_label: 'Nome Completo',
+                form_name_placeholder: 'O teu nome',
+                form_email_label: 'Email',
+                form_email_placeholder: 'O teu email',
+                form_phone_label: 'Telefone',
+                form_phone_placeholder: 'O teu contacto telefónico',
+                form_message_label: 'Mensagem',
+                form_message_placeholder: 'Conta-nos o que procuras...',
+                form_submit: 'Enviar Mensagem',
+                footer_rights: 'Balmoral\'s Imperium. Todos os direitos reservados. | Criação responsável de Cavalier King Charles Spaniel'
+            },
+            en: {
+                language_label: 'Language',
+                nav_home: 'Home',
+                nav_about: 'About',
+                nav_dogs: 'Our Dogs',
+                nav_philosophy: 'Philosophy',
+                nav_gallery: 'Gallery',
+                nav_contact: 'Contact',
+                instagram_title: 'Follow us on Instagram',
+                instagram_text: 'Follow Balmoral\'s Imperium daily and discover the latest updates',
+                partner_petclinic_text: 'Veterinary clinic partner of Balmoral\'s Imperium, providing dedicated care and specialized services for our dogs.',
+                partner_cral_text: 'Partner specialized in animal reproduction, providing technical support and advanced care for our bloodlines.',
+                hero_subtitle: 'Responsible Breeding',
+                hero_description: 'Excellence and dedication in breeding Cavalier King Charles Spaniel. Every dog is a work of love, health, and exceptional temperament.',
+                hero_cta_dogs: 'Meet our dogs',
+                hero_cta_contact: 'Contact us',
+                about_title: 'About Us',
+                about_tagline: 'A story of passion, dedication and respect for the Cavalier King Charles Spaniel breed',
+                about_heading: 'Tradition and Excellence',
+                about_p1: 'Balmoral\'s Imperium was born from unconditional love for the Cavalier King Charles Spaniel breed. Our name evokes British grandeur and tradition, values we instill in every breeding.',
+                about_p2: 'We meticulously select each breeder, prioritizing health, loving temperament, and breed morphology. All our dogs undergo rigorous genetic and cardiac testing.',
+                about_p3: 'We believe every puppy should be a loyal, healthy companion with exceptional temperament — qualities that make the Cavalier one of the most beloved breeds in the world.',
+                about_stat1: 'Health Testing',
+                about_stat2: 'Dedication',
+                about_stat3: 'Endless Results',
+                dogs_title: 'Our Dogs',
+                dogs_description: 'Meet our excellent examples, carefully selected and lovingly raised',
+                dog1_desc: 'Elegant Blenheim female with serene temperament. Exemplary character and striking presence in shows.',
+                dog2_desc: 'Elegant Blenheim male with calm temperament. High-lineage example with striking presence in shows and breeding programs.',
+                dog3_desc: 'High-lineage specimen with exceptional character, suited for shows and breeding. Elegant presence and balanced temperament in any environment.',
+                dog4_desc: 'Elegant Blenheim female with calm temperament. Excellent mother with captivating presence in shows and homes.',
+                dog5_desc: 'Ruby female with excellent genetics and gentle character. Ready for litters with complete veterinary support.',
+                dog6_desc: 'Tricolour specimen with excellent family temperament. Ideal for homes seeking a loyal and calm companion.',
+                philosophy_title: 'Our Philosophy',
+                philosophy_p1: 'At Balmoral\'s Imperium, breeding goes far beyond producing puppies. It is about preserving the essence of the breed, ensuring every new example is healthy, balanced, and able to bring joy to families for many years.',
+                philosophy_p2: 'We strictly follow health protocols recommended by international kennel clubs, including MVD (Mitral Valve Disease), SM (Syringomyelia), and ophthalmologic tests.',
+                philosophy_li1: 'Rigorous genetic testing on all breeders',
+                philosophy_li2: 'Continuous veterinary care',
+                philosophy_li3: 'Early socialization and sensory stimulation',
+                philosophy_li4: 'Purchase contract with parental health guarantee',
+                philosophy_li5: 'Lifetime after-sales guidance',
+                philosophy_li6: 'Commitment to animal welfare',
+                gallery_title: 'Gallery',
+                gallery_text: 'Special moments captured at Balmoral\'s Imperium',
+                gallery_group: 'Group',
+                contact_title: 'Contact',
+                contact_description: 'Get in touch with us for more information about our litters',
+                contact_talk: 'Talk to Us',
+                contact_info_text: 'We are available to answer all your questions about the breed, our litters, and the reservation process. Every puppy deserves a perfect family.',
+                contact_location: 'Location',
+                contact_email: 'Email',
+                contact_instagram: 'Instagram',
+                form_name_label: 'Full Name',
+                form_name_placeholder: 'Your name',
+                form_email_label: 'Email',
+                form_email_placeholder: 'Your email',
+                form_phone_label: 'Phone',
+                form_phone_placeholder: 'Your phone number',
+                form_message_label: 'Message',
+                form_message_placeholder: 'Tell us what you are looking for...',
+                form_submit: 'Send Message',
+                footer_rights: 'Balmoral\'s Imperium. All rights reserved. | Responsible Cavalier King Charles Spaniel breeding'
+            },
+            es: {
+                language_label: 'Idioma',
+                nav_home: 'Inicio',
+                nav_about: 'Sobre Nosotros',
+                nav_dogs: 'Nuestros Perros',
+                nav_philosophy: 'Filosofía',
+                nav_gallery: 'Galería',
+                nav_contact: 'Contacto',
+                instagram_title: 'Síguenos en Instagram',
+                instagram_text: 'Sigue el día a día de Balmoral\'s Imperium y descubre las últimas novedades',
+                partner_petclinic_text: 'Clínica veterinaria socia de Balmoral\'s Imperium, con atención dedicada y cuidados especializados para nuestros perros.',
+                partner_cral_text: 'Socio especializado en reproducción animal, proporcionando soporte técnico y cuidado avanzado para nuestras líneas.',
+                hero_subtitle: 'Cría Responsable',
+                hero_description: 'Excelencia y dedicación en la cría de Cavalier King Charles Spaniel. Cada perro es una obra de amor, salud y temperamento excepcional.',
+                hero_cta_dogs: 'Conoce a nuestros perros',
+                hero_cta_contact: 'Contáctanos',
+                about_title: 'Sobre Nosotros',
+                about_tagline: 'Una historia de pasión, dedicación y respeto por la raza Cavalier King Charles Spaniel',
+                about_heading: 'Tradición y Excelencia',
+                about_p1: 'Balmoral\'s Imperium nació del amor incondicional por la raza Cavalier King Charles Spaniel. Nuestro nombre evoca la grandeza y tradición británicas, valores que plasmamos en cada cría.',
+                about_p2: 'Seleccionamos meticulosamente a cada reproductor, privilegiando la salud, el temperamento amoroso y las características morfológicas de la raza. Todos nuestros perros se someten a rigurosas pruebas genéticas y cardíacas.',
+                about_p3: 'Creemos que cada cachorro debe ser un compañero leal, saludable y con un temperamento excepcional — cualidades que convierten al Cavalier en una de las razas más adoradas del mundo.',
+                about_stat1: 'Pruebas de Salud',
+                about_stat2: 'Dedicación',
+                about_stat3: 'Resultados Infinitos',
+                dogs_title: 'Nuestros Perros',
+                dogs_description: 'Conoce a nuestros ejemplares de excelencia, seleccionados con rigor y criados con amor',
+                dog1_desc: 'Hembra Blenheim de porte elegante y temperamento sereno. Temperamento ejemplar y presencia destacada en exposiciones.',
+                dog2_desc: 'Macho Blenheim de porte elegante y temperamento sereno. Ejemplar de alta linaje con presencia destacada en exposiciones y programas de cría.',
+                dog3_desc: 'Ejemplar de alta línea y carácter excepcional, con aptitud para exposiciones y cría. Presencia elegante y temperamento equilibrado en cualquier ambiente.',
+                dog4_desc: 'Hembra Blenheim de porte elegante y temperamento sereno. Excelente madre y presencia cautivadora en exposiciones y hogares.',
+                dog5_desc: 'Hembra Ruby con excelente genética y carácter dócil. Preparada para camadas con seguimiento veterinario completo.',
+                dog6_desc: 'Ejemplar Tricolour con excelente temperamento familiar. Ideal para hogares que buscan un amigo leal y tranquilo.',
+                philosophy_title: 'Nuestra Filosofía',
+                philosophy_p1: 'En Balmoral\'s Imperium, la cría va mucho más allá de producir cachorros. Se trata de preservar la esencia de la raza, asegurando que cada nuevo ejemplar sea saludable, equilibrado y capaz de brindar alegría a las familias durante muchos años.',
+                philosophy_p2: 'Seguimos rigurosamente los protocolos de salud recomendados por las asociaciones cinófilas internacionales, incluyendo pruebas de MVD (Mitral Valve Disease), SM (Syringomyelia) y exámenes oftalmológicos.',
+                philosophy_li1: 'Pruebas genéticas rigurosas en todos los reproductores',
+                philosophy_li2: 'Acompañamiento veterinario continuo',
+                philosophy_li3: 'Socialización temprana y estimulación sensorial',
+                philosophy_li4: 'Contrato de compra con garantía de salud de los progenitores',
+                philosophy_li5: 'Asesoramiento postventa de por vida',
+                philosophy_li6: 'Compromiso con el bienestar animal',
+                gallery_title: 'Galería',
+                gallery_text: 'Momentos especiales capturados en Balmoral\'s Imperium',
+                gallery_group: 'Grupo',
+                contact_title: 'Contacto',
+                contact_description: 'Ponte en contacto con nosotros para obtener más información sobre nuestras camadas',
+                contact_talk: 'Háblanos',
+                contact_info_text: 'Estamos disponibles para responder a todas tus preguntas sobre la raza, nuestras camadas y el proceso de reserva. Cada cachorro merece una familia perfecta.',
+                contact_location: 'Ubicación',
+                contact_email: 'Email',
+                contact_instagram: 'Instagram',
+                form_name_label: 'Nombre Completo',
+                form_name_placeholder: 'Tu nombre',
+                form_email_label: 'Email',
+                form_email_placeholder: 'Tu email',
+                form_phone_label: 'Teléfono',
+                form_phone_placeholder: 'Tu número de teléfono',
+                form_message_label: 'Mensaje',
+                form_message_placeholder: 'Cuéntanos qué buscas...',
+                form_submit: 'Enviar Mensaje',
+                footer_rights: 'Balmoral\'s Imperium. Todos los derechos reservados. | Crianza responsable de Cavalier King Charles Spaniel'
+            },
+            fr: {
+                language_label: 'Langue',
+                nav_home: 'Accueil',
+                nav_about: 'À Propos',
+                nav_dogs: 'Nos Chiens',
+                nav_philosophy: 'Philosophie',
+                nav_gallery: 'Galerie',
+                nav_contact: 'Contact',
+                instagram_title: 'Suivez-nous sur Instagram',
+                instagram_text: 'Suivez le quotidien de Balmoral\'s Imperium et découvrez les dernières nouveautés',
+                partner_petclinic_text: 'Clinique vétérinaire partenaire de Balmoral\'s Imperium, offrant des soins dédiés et des services spécialisés pour nos chiens.',
+                partner_cral_text: 'Partenaire spécialisé en reproduction animale, fournissant un support technique et des soins avancés pour nos lignées.',
+                hero_subtitle: 'Élevage Responsable',
+                hero_description: 'Excellence et dévouement dans l\'élevage du Cavalier King Charles Spaniel. Chaque chien est une œuvre d\'amour, de santé et de tempérament exceptionnel.',
+                hero_cta_dogs: 'Découvrez nos chiens',
+                hero_cta_contact: 'Nous contacter',
+                about_title: 'À Propos de Nous',
+                about_tagline: 'Une histoire de passion, de dévouement et de respect pour la race Cavalier King Charles Spaniel',
+                about_heading: 'Tradition et Excellence',
+                about_p1: 'Balmoral\'s Imperium est né de l\'amour inconditionnel pour la race Cavalier King Charles Spaniel. Notre nom évoque la grandeur et la tradition britanniques, des valeurs que nous inscrivons dans chaque élevage.',
+                about_p2: 'Nous sélectionnons méticuleusement chaque reproducteur, en privilégiant la santé, le tempérament affectueux et les caractéristiques morphologiques de la race. Tous nos chiens subissent des tests génétiques et cardiaques rigoureux.',
+                about_p3: 'Nous croyons que chaque chiot doit être un compagnon loyal, sain et au tempérament exceptionnel — des qualités qui font du Cavalier l\'une des races les plus adorées au monde.',
+                about_stat1: 'Tests de Santé',
+                about_stat2: 'Dévouement',
+                about_stat3: 'Résultats Infini',
+                dogs_title: 'Nos Chiens',
+                dogs_description: 'Découvrez nos exemplaires d\'excellence, soigneusement sélectionnés et élevés avec amour',
+                dog1_desc: 'Femelle Blenheim élégante au tempérament serein. Caractère exemplaire et présence marquante en exposition.',
+                dog2_desc: 'Mâle Blenheim élégant au tempérament calme. Exemple de haute lignée avec présence marquante en exposition et en programmes d\'élevage.',
+                dog3_desc: 'Spécimen de haute lignée au caractère exceptionnel, adapté aux expositions et à l\'élevage. Présence élégante et tempérament équilibré en toutes circonstances.',
+                dog4_desc: 'Femelle Blenheim élégante au tempérament serein. Excellente mère et présence captivante en exposition et à la maison.',
+                dog5_desc: 'Femelle Ruby à l\'excellente génétique et au caractère doux. Prête pour les portées avec un suivi vétérinaire complet.',
+                dog6_desc: 'Spécimen Tricolore au tempérament familial excellent. Idéal pour les foyers à la recherche d\'un ami loyal et calme.',
+                philosophy_title: 'Notre Philosophie',
+                philosophy_p1: 'Chez Balmoral\'s Imperium, l\'élevage va bien au-delà de la production de chiots. Il s\'agit de préserver l\'essence de la race, en veillant à ce que chaque nouvel exemplaire soit sain, équilibré et capable d\'apporter de la joie aux familles pendant de nombreuses années.',
+                philosophy_p2: 'Nous suivons rigoureusement les protocoles de santé recommandés par les associations cynophiles internationales, y compris les tests de MVD (Mitral Valve Disease), SM (Syringomyelia) et les examens ophtalmologiques.',
+                philosophy_li1: 'Tests génétiques rigoureux sur tous les reproducteurs',
+                philosophy_li2: 'Suivi vétérinaire continu',
+                philosophy_li3: 'Socialisation précoce et stimulation sensorielle',
+                philosophy_li4: 'Contrat d\'achat avec garantie de santé des parents',
+                philosophy_li5: 'Conseils après-vente à vie',
+                philosophy_li6: 'Engagement envers le bien-être animal',
+                gallery_title: 'Galerie',
+                gallery_text: 'Moments spéciaux capturés chez Balmoral\'s Imperium',
+                gallery_group: 'Groupe',
+                contact_title: 'Contact',
+                contact_description: 'Contactez-nous pour plus d\'informations sur nos portées',
+                contact_talk: 'Parlez-nous',
+                contact_info_text: 'Nous sommes disponibles pour répondre à toutes vos questions sur la race, nos portées et le processus de réservation. Chaque chiot mérite une famille parfaite.',
+                contact_location: 'Emplacement',
+                contact_email: 'Email',
+                contact_instagram: 'Instagram',
+                form_name_label: 'Nom Complet',
+                form_name_placeholder: 'Votre nom',
+                form_email_label: 'Email',
+                form_email_placeholder: 'Votre email',
+                form_phone_label: 'Téléphone',
+                form_phone_placeholder: 'Votre numéro de téléphone',
+                form_message_label: 'Message',
+                form_message_placeholder: 'Dites-nous ce que vous recherchez...',
+                form_submit: 'Envoyer le message',
+                footer_rights: 'Balmoral\'s Imperium. Tous droits réservés. | Élevage responsable de Cavalier King Charles Spaniel'
+            },
+            zh: {
+                language_label: '语言',
+                nav_home: '首页',
+                nav_about: '关于我们',
+                nav_dogs: '我们的狗',
+                nav_philosophy: '理念',
+                nav_gallery: '画廊',
+                nav_contact: '联系我们',
+                instagram_title: '关注我们的 Instagram',
+                instagram_text: '关注 Balmoral\'s Imperium 的日常并发现最新消息',
+                partner_petclinic_text: 'Balmoral\'s Imperium 的合作兽医诊所，为我们的犬只提供专注护理和专业服务。',
+                partner_cral_text: '专注于动物繁殖的合作伙伴，为我们的血统提供技术支持和高级护理。',
+                hero_subtitle: '负责任的繁育',
+                hero_description: '致力于繁育 Cavalier King Charles Spaniel 的卓越与奉献。每只狗都是爱、健康和卓越气质的结晶。',
+                hero_cta_dogs: '认识我们的狗',
+                hero_cta_contact: '联系我们',
+                about_title: '关于我们',
+                about_tagline: '一段关于对 Cavalier King Charles Spaniel 品种的热情、奉献与尊重的故事',
+                about_heading: '传统与卓越',
+                about_p1: 'Balmoral\'s Imperium 源于对 Cavalier King Charles Spaniel 品种的无条件热爱。我们的名字唤起英国的宏伟与传统，这些价值观体现在我们的每一次繁育中。',
+                about_p2: '我们精心挑选每一位繁殖犬，优先考虑健康、亲和的性格和品种的形态特征。我们的所有犬只都接受严格的基因和心脏检测。',
+                about_p3: '我们相信每只幼犬都应该是忠诚、健康且性情出众的伴侣——这些品质使 Cavalier 成为世界上最受欢迎的品种之一。',
+                about_stat1: '健康检测',
+                about_stat2: '奉献精神',
+                about_stat3: '无限成果',
+                dogs_title: '我们的狗',
+                dogs_description: '认识我们卓越的犬只，它们经过精心挑选并带着爱心成长',
+                dog1_desc: '优雅的布伦海姆雌犬，性情宁静。在展览中具有典范的性格和醒目的表现力。',
+                dog2_desc: '优雅的布伦海姆雄犬，性情平稳。具有高血统的典范，在展览和繁育项目中表现突出。',
+                dog3_desc: '高血统、性格出众的犬只，适合展览和繁育。无论在何种环境中都具有优雅的气质和平衡的性情。',
+                dog4_desc: '优雅的布伦海姆雌犬，性情宁静。出色的母犬，在展览和家庭中都有迷人的表现。',
+                dog5_desc: '优秀基因且性情温顺的红宝石雌犬。已准备好配种，具备全面的兽医支持。',
+                dog6_desc: '具有出色家庭性情的三色犬。非常适合寻找忠诚且温和伙伴的家庭。',
+                philosophy_title: '我们的理念',
+                philosophy_p1: '在 Balmoral\'s Imperium，繁育远不止是生产幼犬。这是为了保留品种的本质，确保每一个新个体都健康、平衡，并能为家庭带来多年欢乐。',
+                philosophy_p2: '我们严格遵循国际犬业协会推荐的健康协议，包括 MVD (二尖瓣疾病)、SM (脊髓空洞症) 和眼科检查。',
+                philosophy_li1: '对所有繁殖犬进行严格的基因检测',
+                philosophy_li2: '持续的兽医护理',
+                philosophy_li3: '早期社会化和感官刺激',
+                philosophy_li4: '带有亲本健康保证的购犬合同',
+                philosophy_li5: '终身售后指导',
+                philosophy_li6: '对动物福利的承诺',
+                gallery_title: '画廊',
+                gallery_text: 'Balmoral\'s Imperium 捕捉的特别时刻',
+                gallery_group: '组合',
+                contact_title: '联系我们',
+                contact_description: '联系我们以获取有关我们窝犬的更多信息',
+                contact_talk: '与我们联系',
+                contact_info_text: '我们随时准备回答您有关品种、窝犬和预订流程的所有问题。每只幼犬都值得拥有一个完美的家庭。',
+                contact_location: '位置',
+                contact_email: '邮箱',
+                contact_instagram: 'Instagram',
+                form_name_label: '全名',
+                form_name_placeholder: '你的名字',
+                form_email_label: '邮箱',
+                form_email_placeholder: '你的邮箱',
+                form_phone_label: '电话',
+                form_phone_placeholder: '你的电话号码',
+                form_message_label: '留言',
+                form_message_placeholder: '告诉我们你在寻找什么...',
+                form_submit: '发送留言',
+                footer_rights: 'Balmoral\'s Imperium。版权所有。| 负责任的 Cavalier King Charles Spaniel 繁育'
+            },
+            ja: {
+                language_label: '言語',
+                page_title: 'Balmoral\'s Imperium | Cavalier King Charles Spaniel の繁殖',
+                nav_home: 'ホーム',
+                nav_about: '私たちについて',
+                nav_dogs: '私たちの犬',
+                nav_philosophy: 'フィロソフィー',
+                nav_gallery: 'ギャラリー',
+                nav_contact: 'コンタクト',
+                instagram_title: 'Instagramでフォロー',
+                instagram_text: 'Balmoral\'s Imperiumの日常をフォローして最新情報をチェック',
+                partner_petclinic_text: 'Balmoral\'s Imperium の提携獣医クリニックで、犬たちに専任ケアと専門的なサービスを提供しています。',
+                partner_cral_text: '動物繁殖を専門とするパートナーで、私たちの血統に技術サポートと高度なケアを提供します。',
+                hero_subtitle: '責任あるブリーディング',
+                hero_description: 'Cavalier King Charles Spanielの繁殖における卓越性と献身。すべての犬は愛と健康、優れた気質の作品です。',
+                hero_cta_dogs: '犬たちを見る',
+                hero_cta_contact: 'お問い合わせ',
+                about_title: '私たちについて',
+                about_tagline: 'Cavalier King Charles Spanielの品種への情熱、献身、尊敬の物語',
+                about_heading: '伝統と卓越',
+                about_p1: 'Balmoral\'s ImperiumはCavalier King Charles Spanielへの無条件の愛から生まれました。当社の名前は英国の壮大さと伝統を呼び起こし、その価値観をすべての繁殖に注ぎます。',
+                about_p2: '私たちは、健康、愛情ある気質、品種の形態的特徴を優先して、各繁殖犬を慎重に選びます。すべての犬は厳しい遺伝子検査と心臓検査を受けています。',
+                about_p3: '私たちは、すべての子犬が忠実で健康な仲間であり、卓越した気質を持つべきだと考えています — これらの特長がCavalierを世界で最も愛される品種の1つにします。',
+                about_stat1: '健康チェック',
+                about_stat2: '献身',
+                about_stat3: '終わりなき成果',
+                dogs_title: '私たちの犬',
+                dogs_description: '厳選され、愛情を込めて育てられた私たちの優れた犬たちをご覧ください',
+                dog1_desc: '優雅なブレンハイムのメスで、穏やかな気質。ショーでの模範的な性格と印象的な存在感。',
+                dog2_desc: '優雅なブレンハイムのオスで、落ち着いた気質。ショーや繁殖プログラムで目立つ存在感を持つ高い血統の一例。',
+                dog3_desc: '高血統で卓越した性格を持つ犬。ショーや繁殖に適し、どんな環境でもバランスの取れた気質と優雅さを備えています。',
+                dog4_desc: '優雅なブレンハイムのメスで、穏やかな気質。優れた母犬で、ショーや家庭で魅力的な存在です。',
+                dog5_desc: '優れた遺伝子と穏やかな性格を持つルビーのメス。完全な獣医サポートのもとで子犬を迎える準備ができています。',
+                dog6_desc: '優れた家庭的な気質を持つトライカラーの犬。忠実で穏やかな友を求める家庭に最適です。',
+                philosophy_title: '私たちの理念',
+                philosophy_p1: 'Balmoral\'s Imperiumでは、繁殖は単に子犬を生み出すこと以上のものです。品種の本質を守り、すべての新しい個体が健康でバランスが取れ、何年にもわたって家族に喜びをもたらすことが重要です。',
+                philosophy_p2: '私たちは国際の犬舎協会が推奨する健康プロトコルに厳格に従っています。MVD（僧帽弁疾患）、SM（脊髄空洞症）、眼科検査を含みます。',
+                philosophy_li1: 'すべての繁殖犬に対する厳格な遺伝子検査',
+                philosophy_li2: '継続的な獣医ケア',
+                philosophy_li3: '早期の社会化と感覚刺激',
+                philosophy_li4: '親犬の健康保証付き購入契約',
+                philosophy_li5: '生涯にわたるアフターサービス',
+                philosophy_li6: '動物福祉へのコミットメント',
+                gallery_title: 'ギャラリー',
+                gallery_text: 'Balmoral\'s Imperiumで捉えた特別な瞬間',
+                gallery_group: 'グループ',
+                contact_title: 'コンタクト',
+                contact_description: '当犬舎の子犬についての詳細はお気軽にお問い合わせください',
+                contact_talk: 'お問い合わせ',
+                contact_info_text: '品種、子犬、予約手続きについての質問にいつでもお答えします。すべての子犬には理想的な家族が必要です。',
+                contact_location: '所在地',
+                contact_email: 'メール',
+                contact_instagram: 'Instagram',
+                form_name_label: '氏名',
+                form_name_placeholder: 'あなたの名前',
+                form_email_label: 'メール',
+                form_email_placeholder: 'あなたのメール',
+                form_phone_label: '電話番号',
+                form_phone_placeholder: 'あなたの電話番号',
+                form_message_label: 'メッセージ',
+                form_message_placeholder: 'お探しの内容をお聞かせください...',
+                form_submit: 'メッセージを送信',
+                footer_rights: 'Balmoral\'s Imperium。全著作権所有。| Cavalier King Charles Spanielの責任ある繁殖'
+            },
+            ru: {
+                language_label: 'Язык',
+                hero_subtitle: 'Ответственное разведение',
+                hero_description: 'Превосходство и преданность разведению Cavalier King Charles Spaniel. Каждая собака — это работа любви, здоровья и исключительного темперамента.',
+                hero_cta_dogs: 'Познакомьтесь с нашими собаками',
+                hero_cta_contact: 'Связаться с нами',
+                about_title: 'О нас',
+                about_tagline: 'История страсти, преданности и уважения к породе Cavalier King Charles Spaniel',
+                about_heading: 'Традиции и превосходство',
+                about_p1: 'Balmoral\'s Imperium родился из безусловной любви к породе Cavalier King Charles Spaniel. Наше имя вызывает британское величие и традиции, ценности которых мы вкладываем в каждое разведение.',
+                about_p2: 'Мы тщательно отбираем каждого производителя, отдавая приоритет здоровью, доброму темпераменту и морфологии породы. Все наши собаки проходят строгие генетические и кардиологические тесты.',
+                about_p3: 'Мы считаем, что каждый щенок должен быть верным, здоровым компаньоном с исключительным темпераментом — качества, которые делают Cavalier одной из самых любимых пород в мире.',
+                about_stat1: 'Генетические тесты',
+                about_stat2: 'Преданность',
+                about_stat3: 'Бесконечные результаты',
+                dogs_title: 'Наши собаки',
+                dogs_description: 'Познакомьтесь с нашими образцами высшего класса, тщательно отобранными и выращенными с любовью',
+                dog1_desc: 'Элегантная самка бленхейм с спокойным характером. Примерный темперамент и яркое присутствие на выставках.',
+                dog2_desc: 'Элегантный самец бленхейм со спокойным характером. Пример высокого происхождения с заметным присутствием на выставках и в племенных программах.',
+                dog3_desc: 'Представитель высокого происхождения с исключительным характером, подходящий для выставок и разведения. Элегантное присутствие и сбалансированный характер в любой обстановке.',
+                dog4_desc: 'Элегантная самка бленхейм со спокойным характером. Отличная мать и завораживающее присутствие на выставках и в домах.',
+                dog5_desc: 'Рубиновая самка с отличной генетикой и мягким характером. Готова к пометам с полным ветеринарным сопровождением.',
+                dog6_desc: 'Представитель триколор с отличным семейным темпераментом. Идеально подходит для домов, ищущих верного и спокойного друга.',
+                philosophy_title: 'Наша философия',
+                philosophy_p1: 'В Balmoral\'s Imperium разведение — это не просто производство щенков. Это сохранение сущности породы, обеспечение здоровья, баланса и способности приносить радость семьям на долгие годы.',
+                philosophy_p2: 'Мы строго следуем протоколам здоровья, рекомендованным международными кинологическими ассоциациями, включая MVD (Mitral Valve Disease), SM (Syringomyelia) и офтальмологические тесты.',
+                philosophy_li1: 'Строгие генетические тесты для всех производителей',
+                philosophy_li2: 'Постоянный ветеринарный контроль',
+                philosophy_li3: 'Ранняя социализация и сенсорная стимуляция',
+                philosophy_li4: 'Договор купли с гарантией здоровья родителей',
+                philosophy_li5: 'Пожизненное послепродажное сопровождение',
+                philosophy_li6: 'Обязательство по благополучию животных',
+                gallery_title: 'Галерея',
+                gallery_text: 'Особые моменты, запечатленные в Balmoral\'s Imperium',
+                gallery_group: 'Группа',
+                contact_title: 'Контакты',
+                contact_description: 'Свяжитесь с нами для получения дополнительной информации о наших пометах',
+                contact_talk: 'Свяжитесь с нами',
+                contact_info_text: 'Мы готовы ответить на все ваши вопросы о породе, наших пометах и процедуре бронирования. Каждый щенок заслуживает идеальную семью.',
+                contact_location: 'Расположение',
+                contact_email: 'Электронная почта',
+                contact_instagram: 'Instagram',
+                form_name_label: 'Полное имя',
+                form_name_placeholder: 'Ваше имя',
+                form_email_label: 'Электронная почта',
+                form_email_placeholder: 'Ваш email',
+                form_phone_label: 'Телефон',
+                form_phone_placeholder: 'Ваш номер телефона',
+                form_message_label: 'Сообщение',
+                form_message_placeholder: 'Расскажите, что вы ищете...',
+                form_submit: 'Отправить сообщение',
+                footer_rights: 'Balmoral\'s Imperium. Все права защищены. | Ответственное разведение Cavalier King Charles Spaniel'
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-translate-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    el.placeholder = translations[lang][key];
+                }
+            });
+            if (translations[lang] && translations[lang].page_title) {
+                document.title = translations[lang].page_title;
+            }
+            updateLanguageDropdown(lang);
+            closeLanguageDropdown();
+        }
+
+        function updateLanguageDropdown(lang) {
+            const activeItems = document.querySelectorAll('.language-dropdown li');
+            activeItems.forEach(item => {
+                const itemLang = item.getAttribute('data-lang');
+                item.classList.toggle('active', itemLang === lang);
+            });
+            const buttonFlag = document.querySelector('.language-button .language-flag');
+            const button = document.getElementById('languageButton');
+            if (buttonFlag && button) {
+                buttonFlag.className = 'language-flag flag-' + lang;
+                button.setAttribute('aria-label', 'Selecionar idioma: ' + (button.querySelector('.sr-only') ? button.querySelector('.sr-only').textContent : lang));
+            }
+        }
+
+        function closeLanguageDropdown() {
+            const dropdown = document.getElementById('languageDropdown');
+            const button = document.getElementById('languageButton');
+            if (dropdown) {
+                dropdown.classList.remove('active');
+            }
+            if (button) {
+                button.setAttribute('aria-expanded', 'false');
+            }
+        }
+
+        const LANGUAGE_STORAGE_KEY = 'balmoralimperium_language';
+
+        function toggleLanguageDropdown() {
+            const dropdown = document.getElementById('languageDropdown');
+            const button = document.getElementById('languageButton');
+            if (!dropdown || !button) return;
+            const isOpen = dropdown.classList.toggle('active');
+            button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+
+        function showLanguageModal() {
+            const modal = document.getElementById('languageModal');
+            if (!modal) return;
+            modal.classList.add('open');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideLanguageModal() {
+            const modal = document.getElementById('languageModal');
+            if (!modal) return;
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        function selectLanguage(lang) {
+            if (!lang || !translations[lang]) return;
+            localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
+            changeLanguage(lang);
+            hideLanguageModal();
+        }
+
+        document.addEventListener('click', (event) => {
+            const selector = document.querySelector('.language-selector');
+            if (!selector) return;
+            if (!selector.contains(event.target)) {
+                closeLanguageDropdown();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('languageButton');
+            const dropdown = document.getElementById('languageDropdown');
+            if (button) {
+                button.addEventListener('click', toggleLanguageDropdown);
+            }
+            if (dropdown) {
+                dropdown.querySelectorAll('li').forEach(item => {
+                    item.addEventListener('click', () => {
+                        const lang = item.getAttribute('data-lang');
+                        if (lang) {
+                            changeLanguage(lang);
+                        }
+                    });
+                });
+            }
+
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalClose = document.getElementById('modalClose');
+
+            function closeModal() {
+                if (!modal) return;
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            if (galleryItems.length && modal && modalImage) {
+                galleryItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        const img = item.querySelector('img');
+                        if (!img) return;
+                        modalImage.src = img.src;
+                        modalImage.alt = img.alt || 'Imagem da galeria';
+                        modal.classList.add('open');
+                        modal.setAttribute('aria-hidden', 'false');
+                        document.body.style.overflow = 'hidden';
+                    });
+                });
+            }
+
+            if (modalClose) {
+                modalClose.addEventListener('click', closeModal);
+            }
+
+            if (modal) {
+                modal.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        closeModal();
+                    }
+                });
+            }
+
+            const modalButtons = document.querySelectorAll('.language-modal-list li');
+            modalButtons.forEach(item => {
+                item.addEventListener('click', () => {
+                    const lang = item.getAttribute('data-lang');
+                    selectLanguage(lang);
+                });
+                item.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        const lang = item.getAttribute('data-lang');
+                        selectLanguage(lang);
+                    }
+                });
+            });
+
+            const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+            if (savedLanguage && translations[savedLanguage]) {
+                changeLanguage(savedLanguage);
+            } else {
+                changeLanguage('pt');
+                showLanguageModal();
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        // Set default language
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
